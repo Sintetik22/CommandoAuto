@@ -39,8 +39,5 @@ for i,v in pairs(workspace.Monsters:GetChildren()) do
             end
         end
     end
-
-
-
-            
-
+wait(0.1)
+noclip = false
