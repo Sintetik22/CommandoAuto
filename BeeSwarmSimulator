@@ -1,46 +1,48 @@
-    local floatpad = Instance.new("Part", game:GetService("Workspace"))
-    floatpad.CanCollide = false
-    floatpad.Anchored = true
-    floatpad.Transparency = 1
-    floatpad.Name = "FloatPad"
-    
-    game:GetService('RunService').Heartbeat:connect(function() 
-        if noclip then game.Players.LocalPlayer.Character.Humanoid.BodyTypeScale.Value = 0 floatpad.CanCollide = true floatpad.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.X, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y-3.75, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Z) task.wait(0)  else floatpad.CanCollide = false end
-    end)
-    
-    
-    noclip = false
-    local farmVici = false
-    
-    local function Tween(time, pos)
-        noclip = true
-        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+local floatpad = Instance.new("Part", game:GetService("Workspace"))
+floatpad.CanCollide = false
+floatpad.Anchored = true
+floatpad.Transparency = 1
+floatpad.Name = "FloatPad"
+
+game:GetService('RunService').Heartbeat:connect(function() 
+    if noclip then game.Players.LocalPlayer.Character.Humanoid.BodyTypeScale.Value = 0 floatpad.CanCollide = true floatpad.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.X, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y-3.75, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Z) task.wait(0)  else floatpad.CanCollide = false end
+end)
+
+
+noclip = false
+local farmVici = false
+
+local function Tween(time, pos)
+    noclip = true
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end
+
+local ccccount = 0
+
+local function killViciousBeeFunc()
+for i,v in pairs(workspace.Monsters:GetChildren()) do
+    if string.find(v.Name, "Commando") then 
+        pcall(function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+        end)
     end
-    
-    local ccccount = 0
-    
-    local function killViciousBeeFunc()
-    for i,v in pairs(workspace.Monsters:GetChildren()) do
-        if string.find(v.Name, "Commando") then 
-            pcall(function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-            end)
-        end
-    end
-    end
-    for i,v in pairs(workspace.Monsters:GetChildren()) do
-        if string.find(v.Name, "Commando") then
-                ccccount = ccccount + 1
-                if ccccount == 5 then
-                    cccccount = 0
-                    Tween(0.5,v.Torso.CFrame - Vector3.new(0, 10, 0))
-                else
-                Tween(0.5,v.Head.CFrame + Vector3.new(0, 13, 0))
-                end
+end
+end
+for i,v in pairs(workspace.Monsters:GetChildren()) do
+    if string.find(v.Name, "Commando") then
+            ccccount = ccccount + 1
+            if ccccount == 5 then
+                cccccount = 0
+                Tween(0.5,v.Torso.CFrame - Vector3.new(0, 10, 0))
+            else
+            Tween(0.5,v.Head.CFrame + Vector3.new(0, 13, 0))
             end
         end
-    
-    
-                
-    
-    
+    end
+    wait(3)
+    noclip = false
+
+
+
+            
+
