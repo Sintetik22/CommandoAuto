@@ -19,9 +19,9 @@ for i,v in pairs(workspace.Monsters:GetChildren()) do
             ccccount = ccccount + 1
             if ccccount == 5 then
                 cccccount = 0
-                Tween(0.5,v.Torso.CFrame - Vector3.new(13, 10, 0))
+                Tween(0.5,v.Torso.CFrame - Vector3.new(17, 10, 0))
             else
-            Tween(0.5,v.Head.CFrame + Vector3.new(13, 13, 0))
+            Tween(0.5,v.Head.CFrame + Vector3.new(17, 16, 0))
             end
         end
     end
