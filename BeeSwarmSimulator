@@ -21,7 +21,7 @@ local ccccount = 0
 
 local function killViciousBeeFunc()
 for i,v in pairs(workspace.Monsters:GetChildren()) do
-    if string.find(v.Name, "Commando") then 
+    if string.find(v.Name, "Stick Bug") then 
         pcall(function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
         end)
@@ -29,7 +29,7 @@ for i,v in pairs(workspace.Monsters:GetChildren()) do
 end
 end
 for i,v in pairs(workspace.Monsters:GetChildren()) do
-    if string.find(v.Name, "Commando") then
+    if string.find(v.Name, "Stick Bug") then
             ccccount = ccccount + 1
             if ccccount == 5 then
                 cccccount = 0
