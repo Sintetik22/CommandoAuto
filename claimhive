@@ -1,0 +1,24 @@
+if game:IsLoaded() then
+local A_1 = "Hive1"
+local Event = game:GetService("ReplicatedStorage").Shared.Network.ClaimTree
+Event:FireServer(A_1)
+wait(.1)
+local A_1 = "Hive2"
+local Event = game:GetService("ReplicatedStorage").Shared.Network.ClaimTree
+Event:FireServer(A_1)
+wait(.1)
+local A_1 = "Hive3"
+local Event = game:GetService("ReplicatedStorage").Shared.Network.ClaimTree
+Event:FireServer(A_1)
+wait(.1)
+ocal A_1 = "Hive4"
+local Event = game:GetService("ReplicatedStorage").Shared.Network.ClaimTree
+Event:FireServer(A_1)
+wait(.1)
+local A_1 = "Hive5"
+local Event = game:GetService("ReplicatedStorage").Shared.Network.ClaimTree
+Event:FireServer(A_1)
+wait(.1) 
+local A_1 = "Hive6"
+local Event = game:GetService("ReplicatedStorage").Shared.Network.ClaimTree
+Event:FireServer(A_1)
